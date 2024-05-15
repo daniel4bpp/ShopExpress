@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopExpress</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style type='text/css'>
+        @import 'buscar.css';
+
+        .boton-icono {
+            position: relative; /* Asegura que la imagen esté posicionada correctamente */
+            padding-left: 30px; /* Espacio para la imagen */
+        }
+        .boton-icono img {
+            position: absolute; /* Posición absoluta para la imagen */
+            left: 5px; /* Alineación de la imagen */
+            top: 50%; /* Alineación vertical */
+            transform: translateY(-50%); /* Alinear verticalmente */
+            width: 20px; /* Ancho de la imagen (ajustar según sea necesario) */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cajabuscar">
+        <form method="get" id="buscarform">
+            <fieldset>
+                <input type="text" id="s" value="" placeholder="Buscar" />
+                <input class="button" type="submit" value="" />
+                <i class="search"></i>
+            </fieldset>
+        </form>
+    </div>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="images/logotipo2.png" alt="Logotipo">
+        </a>
+    </header>
+
+
+
+    <nav class="navegacion">
+        <!-- Botón -->
+               <button  class="boton-icono" onclick="mostrarCategorias()" ><img src="images/lineas-de-opciones.png" alt="Icono">Categorías</button>
+
+        <!-- Contenedor de Categorías -->
+        <div id="categorias">
+            <h2>Categorías:</h2>
+            <ul>
+                <li><a class="navegacion__enlace" href="calsado.html">calsado</a></li>
+                <li><a class="navegacion__enlace" href="ropa.html">Ropa</a></li>
+                <li><a class="navegacion__enlace" href="nosotros.html">Electrodomesticos</a></li>
+                <li><a class="navegacion__enlace" href="nosotros.html">Deportes</a></li>
+                <!-- Agrega más categorías según sea necesario -->
+            </ul>
+        </div>
+
+        <script>
+            function mostrarCategorias() {
+                var categorias = document.getElementById("categorias");
+                if (categorias.style.display === "none") {
+                    categorias.style.display = "block";
+                } else {
+                    categorias.style.display = "none";
+                }
+            }
+
+        </script>
+
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Nuestros Productos en promoción</h1>
+
+
+
+        <div class="grid">
+            <div class="producto">
+                <a href="producto.html">
+                    <img class="producto__imagen" src="images/laptop.webp" alt="imagen de laptop">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Laptop Lenovo V15 Intel Celeron 8GB RAM 256GB SSD</p>
+                        <p class="producto__precio">$5,499.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto2.html">
+                    <img class="producto__imagen" src="images/consola.webp" alt="imagen consola">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Consola Microsoft XBOX SERIE X DIAB</p>
+                        <p class="producto__precio">$10,299.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto3.html">
+                    <img class="producto__imagen" src="images/refrigerador.webp" alt="imagen refrigerador">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Refrigerador Automático 300 L Inox Mate Mabe - RMA300FYMRM0</p>
+                        <p class="producto__precio">8,299.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto4.html">
+                    <img class="producto__imagen" src="images/silla.webp" alt="imagen silla">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Silla de Oficina Ergonómica con Reposacabezas y Reposabrazos, Color
+                            Negro HOMEMAKE FURNITURE Moderno</p>
+                        <p class="producto__precio">3,399.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto5.html">
+                    <img class="producto__imagen" src="images/sala.webp" alt="imagen sala">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Sala Esquinera en U Corbel, Gris Oxford, 4 salas en 1, 200x315x255
+                            cm El Bazar Store Corbel, moderna, Tipo en U</p>
+                        <p class="producto__precio">$9,999.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto6.html">
+                    <img class="producto__imagen" src="images/lavadora.webp" alt="imagen lavadora">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Lavadora Atvio Semi Automática 11 Kg Color Blanca</p>
+                        <p class="producto__precio">$2,690.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto7.html">
+                    <img class="producto__imagen" src="images/ventilador.webp" alt="imagen ventilador">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Ventilador de piso Wi-Fi Taurus Smartüs compatible con asistentes de voz 20" Versüs</p>
+                        <p class="producto__precio">$1,099.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto8.html">
+                    <img class="producto__imagen" src="images/carriola.webp" alt="imagen carriola">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Carriola Travel System Aventura Negro D'Bebé 40Negro</p>
+                        <p class="producto__precio">$2,399.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto9.html">
+                    <img class="producto__imagen" src="images/nintendo.webp" alt="imagen nintendo">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Videojuego Nintendo Switch The Legend of Zelda: Breath of the Wild Edición Standard</p>
+                        <p class="producto__precio">$639.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto10.html">
+                    <img class="producto__imagen" src="images/croqueta.webp" alt="imagen croqueta">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Croqueta para perros Ganador adultos razas medianas y grandes 20 kg bundle</p>
+                        <p class="producto__precio">$854.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto11.html">
+                    <img class="producto__imagen" src="images/impermeabilizante.webp" alt="imagen impermeabilizante">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">IMPERMEABILIZANTE 12 AÑOS 19LT IMPERCAUCHO 19LT</p>
+                        <p class="producto__precio">$589.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto12.html">
+                    <img class="producto__imagen" src="images/casa de los sueños.webp" alt="imagen casa de los sueños">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Set de Juego Barbie Nueva Casa de los Sueños</p>
+                        <p class="producto__precio">$2,999.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto 13.html">
+                    <img class="producto__imagen" src="images/mesa plegable.webp" alt="mesa">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">Mesa Plegable tipo portafolio 180 cm JARDIMEX Plastico</p>
+                        <p class="producto__precio">$689.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+            <div class="producto">
+                <a href="producto14.html">
+                    <img class="producto__imagen" src="images/Tv samsung.webp" alt="imagen tv">
+                    <div class="producto__informacion">
+                        <p class="producto__nombre">TV Samsung 65 Pulgadas 4K Ultra HD Smart TV LED UN65CU7000FXZX</p>
+                        <p class="producto__precio">$9,989.00</p>
+                    </div>
+                </a>
+            </div> <!--.producto-->
+
+            <div class="grafico grafico--camisas"></div>
+            <div class="grafico grafico--node"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">ShopExpress - Todos los derechos Reservados 2022.</p>
+    </footer>
+
+</body>
+
+</html>

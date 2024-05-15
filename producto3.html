@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopExpress</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style type='text/css'>
+        @import 'buscar.css';
+
+        .boton-icono {
+            position: relative;
+            /* Asegura que la imagen esté posicionada correctamente */
+            padding-left: 30px;
+            /* Espacio para la imagen */
+        }
+
+        .boton-icono img {
+            position: absolute;
+            /* Posición absoluta para la imagen */
+            left: 5px;
+            /* Alineación de la imagen */
+            top: 50%;
+            /* Alineación vertical */
+            transform: translateY(-50%);
+            /* Alinear verticalmente */
+            width: 20px;
+            /* Ancho de la imagen (ajustar según sea necesario) */
+            height: auto;
+            /* Altura automática para mantener la proporción */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cajabuscar">
+        <form method="get" id="buscarform">
+            <fieldset>
+                <input type="text" id="s" value="" placeholder="Buscar" />
+                <input class="button" type="submit" value="" />
+                <i class="search"></i>
+            </fieldset>
+        </form>
+    </div>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="images/logotipo2.png" alt="Logotipo">
+        </a>
+    </header>
+
+
+
+    <nav class="navegacion">
+        <!-- Botón -->
+        <button class="boton-icono" onclick="mostrarCategorias()"><img src="images/lineas-de-opciones.png"
+                alt="Icono">Categorías</button>
+
+        <!-- Contenedor de Categorías -->
+        <div id="categorias">
+            <h2>Categorías:</h2>
+            <ul>
+                <li><a class="navegacion__enlace" href="calsado.html">calsado</a></li>
+                <li><a class="navegacion__enlace" href="ropa.html">Ropa</a></li>
+                <li><a class="navegacion__enlace" href="nosotros.html">Electrodomesticos</a></li>
+                <li><a class="navegacion__enlace" href="nosotros.html">Deportes</a></li>
+                <!-- Agrega más categorías según sea necesario -->
+            </ul>
+        </div>
+
+        <script>
+            function mostrarCategorias() {
+                var categorias = document.getElementById("categorias");
+                if (categorias.style.display === "none") {
+                    categorias.style.display = "block";
+                } else {
+                    categorias.style.display = "none";
+                }
+            }
+
+        </script>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace" href="ropa.html">Ropa</a>
+        <a class="navegacion__enlace" href="calsado.html">zapatos</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Refrigerador</h1>
+
+        <div class="camisa">
+            <img class="camisa__imagen" src="images/refrigerador.webp" alt="Imagen del Producto">
+
+            <div class="camisa__contenido">
+                <p>Tecnología Home Energy Saver, Ahorro de energía gracias a los componentes de alta eficiencia. Hasta
+                    25% de ahorro de acuerdo a la NOM-015. Conserva tus alimentos frescos como el primer día con Total
+                    Fresh Flow. Espacios inteligentes con anaqueles y cajones de gran capacidad.Despachador de agua,
+                    agua siempre estará fresca y sin sabores añadidos, justo como te gusta.</p>
+
+                <form class="formulario">
+                    <select class="formulario__campo">
+                        <option disabled selected>-- Seleccionar Talla --</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">ShopExpress - Todos los derechos Reservados 2022.</p>
+    </footer>
+
+</body>
+
+</html>

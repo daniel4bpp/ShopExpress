@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopExpress</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style type='text/css'>
+        @import 'buscar.css';
+         .boton-icono {
+            position: relative; /* Asegura que la imagen esté posicionada correctamente */
+            padding-left: 30px; /* Espacio para la imagen */
+        }
+        .boton-icono img {
+            position: absolute; /* Posición absoluta para la imagen */
+            left: 5px; /* Alineación de la imagen */
+            top: 50%; /* Alineación vertical */
+            transform: translateY(-50%); /* Alinear verticalmente */
+            width: 20px; /* Ancho de la imagen (ajustar según sea necesario) */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cajabuscar">
+        <form method="get" id="buscarform">
+            <fieldset>
+                <input type="text" id="s" value="" placeholder="Buscar" />
+                <input class="button" type="submit" value="" />
+                <i class="search"></i>
+            </fieldset>
+        </form>
+    </div>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="images/logotipo2.png" alt="Logotipo">
+        </a>
+    </header>
+
+    
+
+    <nav class="navegacion">
+        <!-- Botón -->
+        <button  class="boton-icono" onclick="mostrarCategorias()" ><img src="images/lineas-de-opciones.png" alt="Icono">Categorías</button>
+
+        <!-- Contenedor de Categorías -->
+        <div id="categorias">
+            <h2>Categorías:</h2>
+            <ul>
+                <li><a class="navegacion__enlace" href="calsado.html">calsado</a></li>
+                <li><a class="navegacion__enlace" href="ropa.html">Ropa</a></li>
+                <li><a class="navegacion__enlace" href="nosotros.html">Electrodomesticos</a></li>
+                <li><a class="navegacion__enlace" href="nosotros.html">Deportes</a></li>
+                <!-- Agrega más categorías según sea necesario -->
+            </ul>
+        </div>
+
+        <script>
+            function mostrarCategorias() {
+                var categorias = document.getElementById("categorias");
+                if (categorias.style.display === "none") {
+                    categorias.style.display = "block";
+                } else {
+                    categorias.style.display = "none";
+                }
+            }
+
+        </script>
+        <a class="navegacion__enlace" href="index.html">Tienda</a>
+
+        <a class="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Nosotros</h1>
+
+        <div class="nosotros">
+            <div class="nosotros__contenido">
+                <h1>Nuestra Misión</h1>
+                <p>
+                    En ShopExpress, nos dedicamos a simplificar tu experiencia de compra de supermercado al proporcionar
+                    productos frescos y de calidad, junto con un servicio excepcional, todo desde la comodidad de tu
+                    hogar. Nuestra misión es hacer que las compras sean más convenientes, accesibles y agradables para
+                    todos nuestros clientes </p>
+
+                <h1>Nuestro Compromiso con la Calidad</h1>
+                <p>
+                    En ShopExpress, la calidad es nuestra principal prioridad. Trabajamos en estrecha colaboración con
+                    productores y proveedores confiables para garantizar que cada producto que llega a tu puerta cumpla
+                    con nuestros estándares de frescura y calidad. Desde frutas y verduras hasta carnes y lácteos,
+                    puedes confiar en que encontrarás los mejores productos en ShopExpress.
+                </p>
+
+                <h1>
+                    Nuestro Equipo
+                </h1>
+                <p>
+                    Detrás de ShopExpress hay un equipo dedicado de personas apasionadas por ofrecer la mejor experiencia
+                    de compra posible. Desde nuestro equipo de compras hasta nuestro equipo de atención al cliente,
+                    todos compartimos un compromiso común de satisfacer las necesidades de nuestros clientes y superar
+                    sus expectativas en cada interacción.
+                </p>
+
+
+            </div>
+            <img class="nosotros__imagen" src="images/bonificacionn.webp" alt="imagen nosotros">
+        </div>
+    </main>
+
+    <section class="contenedor comprar">
+        <h2 class="comprar__titulo">¿Porqué Comprar con nosotros?</h2>
+
+        <div class="bloques">
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_1.png" alt="porque comprar">
+                <h3 class="bloque__titulo">El Mejor Precio</h3>
+                
+            </div> <!--.bloque-->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Para Devs</h3>
+                
+            </div> <!--.bloque-->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_3.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Envío Gratis</h3>
+                
+            </div> <!--.bloque-->
+
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_4.png" alt="porque comprar">
+                <h3 class="bloque__titulo">La Mejor Calidad</h3>
+                
+            </div> <!--.bloque-->
+        </div><!--.bloques-->
+    </section>
+
+    <footer class="footer">
+        <p class="footer__texto">ShopExpress - Todos los derechos Reservados 2022.</p>
+    </footer>
+
+</body>
+
+</html>
